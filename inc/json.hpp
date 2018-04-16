@@ -57,6 +57,9 @@ SOFTWARE.
 #include <valarray> // valarray
 #include <vector> // vector
 
+#include "lib_json/Android.hpp"
+
+
 // exclude unsupported compilers
 #if defined(__clang__)
     #if (__clang_major__ * 10000 + __clang_minor__ * 100 + __clang_patchlevel__) < 30400
@@ -6521,7 +6524,7 @@ class serializer
                         // check that the additional bytes are present
                         assert(i + bytes < s.size());
 
-                        // to use \uxxxx escaping, we first need to caluclate
+                        // to use \uxxxx escaping, we first need to caluclate
                         // the codepoint from the UTF-8 bytes
                         int codepoint = 0;
 
