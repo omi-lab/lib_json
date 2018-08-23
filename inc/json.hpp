@@ -57,8 +57,7 @@ SOFTWARE.
 #include <valarray> // valarray
 #include <vector> // vector
 
-#include "lib_json/Android.hpp"
-
+#include "lib_platform/Polyfill.h"
 
 // exclude unsupported compilers
 #if defined(__clang__)
