@@ -181,11 +181,6 @@ Extension of std::exception objects with a member @a id for exception ids.
 */
 class exception : public std::exception
 {
-  exception(const exception&)=delete;
-  exception& operator=(const exception&)=delete;
-  exception(exception&&)=delete;
-  exception& operator=(exception&&)=delete;
-
   public:
     /// returns the explanatory string
     const char* what() const noexcept override
