@@ -6266,7 +6266,7 @@ class serializer
     */
     static constexpr std::size_t bytes_following(const uint8_t u)
     {
-        return ((0 <= u and u <= 127) ? 0
+        return ((/*0 <= u and */u <= 127) ? 0
                 : ((192 <= u and u <= 223) ? 1
                    : ((224 <= u and u <= 239) ? 2
                       : ((240 <= u and u <= 247) ? 3 : std::string::npos))));
