@@ -2717,7 +2717,11 @@ scan_number_done:
                 // ignore EOF
                 continue;
             }
+#if (CHAR_MIN==0)
+            else if(c <= '\x1f')
+#else
             else if('\x00' <= c and c <= '\x1f')
+#endif
             {
                 // escape control characters
                 std::stringstream ss;
